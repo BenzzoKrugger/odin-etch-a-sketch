@@ -12,9 +12,21 @@ function createGrid(num) {
     }
   }
 }
-
-const element = document.querySelectorAll(".element");
-
-element.addEventListener("mouseenter", () => console.log("XXX"));
-
+// Create Grid
 createGrid(16);
+
+
+// Handle hover
+function handleHover(e){
+    e.target.classList.add("bg-blue-500")
+
+}
+
+const els = document.querySelectorAll(".element");
+console.log(els);
+
+for (const el of els) {
+  el.addEventListener("mouseover", handleHover);
+  
+}
+
