@@ -1,16 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles/output.css">
+    <link rel="stylesheet" href="styles/output.css" />
     <title>Etch a Sketch</title>
-</head>
-<body class="flex justify-center flex-col items-center">
+  </head>
+  <body class="flex justify-center flex-col items-center">
     <h1 class="text-blue-800 text-5xl">Etch a Sketch</h1>
-    <button id="reset" class="cursor-pointer bg-amber-200 border">Reset Grid</button>
-    <div id="grid-container" class="size-[800px] outline-2 flex flex-wrap"></div>
-    
-</body>
-</html> 
+    <div class="flex gap-8">
+      <button id="reset" class="cursor-pointer bg-amber-200 border p-2">
+        Reset Grid
+      </button>
+      <div>
+        <input type="checkbox" name="colorize" id="colorize" />
+        <label for="colorize">Colorize</label>
+      </div>
+    </div>
+
+    <div
+      id="grid-container"
+      class="size-[800px] outline-2 flex flex-wrap"
+    ></div>
+  </body>
+</html>

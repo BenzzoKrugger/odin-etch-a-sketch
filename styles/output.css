@@ -9,14 +9,11 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --spacing: 0.25rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -197,53 +194,9 @@
   .table {
     display: table;
   }
-  .size-12 {
-    width: calc(var(--spacing) * 12);
-    height: calc(var(--spacing) * 12);
-  }
-  .size-64 {
-    width: calc(var(--spacing) * 64);
-    height: calc(var(--spacing) * 64);
-  }
-  .size-200 {
-    width: calc(var(--spacing) * 200);
-    height: calc(var(--spacing) * 200);
-  }
-  .size-\[\$\] {
-    width: $;
-    height: $;
-  }
-  .size-\[50px\] {
-    width: 50px;
-    height: 50px;
-  }
   .size-\[800px\] {
     width: 800px;
     height: 800px;
-  }
-  .h-200 {
-    height: calc(var(--spacing) * 200);
-  }
-  .h-240 {
-    height: calc(var(--spacing) * 240);
-  }
-  .h-\[96\] {
-    height: 96;
-  }
-  .h-\[960px\] {
-    height: 960px;
-  }
-  .w-200 {
-    width: calc(var(--spacing) * 200);
-  }
-  .w-240 {
-    width: calc(var(--spacing) * 240);
-  }
-  .w-\[960\] {
-    width: 960;
-  }
-  .w-\[960px\] {
-    width: 960px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -266,16 +219,24 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
+  .bg-\[rg\] {
+    background-color: rg;
   }
-  .border-red-500 {
-    border-color: var(--color-red-500);
+  .bg-\[rgb\(\$\)\] {
+    background-color: rgb($);
+  }
+  .bg-\[rgb\(\)\] {
+    background-color: rgb();
+  }
+  .bg-\[rgb\(300\,200\,100\)\] {
+    background-color: rgb(300,200,100);
   }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
@@ -283,22 +244,21 @@
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
-  .bg-blue-800 {
-    background-color: var(--color-blue-800);
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
-  .bg-yellow-500 {
-    background-color: var(--color-yellow-500);
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-7xl {
-    font-size: var(--text-7xl);
-    line-height: var(--tw-leading, var(--text-7xl--line-height));
-  }
-  .text-wrap {
-    text-wrap: wrap;
   }
   .text-blue-800 {
     color: var(--color-blue-800);

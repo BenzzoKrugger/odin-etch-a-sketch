@@ -15,10 +15,19 @@ function generateGrid(num) {
   }
 
   const els = document.querySelectorAll(".element");
+  const colorize = document.querySelector("#colorize");
 
   for (const el of els) {
     el.addEventListener("mouseover", (e) => {
-      e.target.classList.add("bg-blue-500");
+      if (colorize.checked) {
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+
+        e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      } else {
+        e.target.classList.add("bg-blue-500");
+      }
     });
   }
 }
